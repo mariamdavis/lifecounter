@@ -1,0 +1,319 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="horizontal"
+        android:id="@+id/layout">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="498dp" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+        android:id="@+id/hello">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/test"
+            android:orientation="horizontal" />
+
+           <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Player 1"
+            android:id="@+id/p1"
+               android:layout_alignParentTop="true"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true"
+               android:textSize="15dp" />
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/p1Add"
+            android:onClick="p1Controls"
+            android:layout_marginTop="21dp"
+            android:layout_below="@+id/p1"
+            android:layout_toRightOf="@+id/p1sub"
+            android:layout_toEndOf="@+id/p1sub" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/p1sub"
+            android:onClick="p1Controls"
+            android:layout_alignBaseline="@+id/p1Add"
+            android:layout_alignBottom="@+id/p1Add"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-5"
+            android:id="@+id/p1sub5"
+            android:onClick="p1Controls"
+            android:layout_above="@+id/textView"
+            android:layout_toRightOf="@+id/p1Add"
+            android:layout_toEndOf="@+id/p1Add" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+5"
+            android:id="@+id/p1Add5"
+                android:layout_alignTop="@+id/p1sub5"
+                android:layout_toRightOf="@+id/p1sub5"
+                android:layout_toEndOf="@+id/p1sub5"
+            android:onClick="p1Controls"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Player 2"
+            android:id="@+id/textView"
+            android:textSize="15dp"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/p1Add"
+            android:layout_alignLeft="@+id/p2sub"
+            android:layout_alignStart="@+id/p2sub" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/p2sub"
+            android:onClick="p2Controls"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_marginTop="18dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/p2add"
+            android:layout_alignBottom="@+id/p2sub"
+            android:layout_toRightOf="@+id/p2sub"
+            android:layout_toEndOf="@+id/p2sub"
+            android:onClick="p2Controls" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-5"
+            android:id="@+id/p2sub5"
+            android:layout_alignBottom="@+id/p2add"
+            android:layout_toRightOf="@+id/p2add"
+            android:layout_toEndOf="@+id/p2add"
+            android:onClick="p2Controls"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+5"
+            android:id="@+id/p2add5"
+            android:layout_alignBottom="@+id/p2sub5"
+            android:layout_alignLeft="@+id/p1Add5"
+            android:layout_alignStart="@+id/p1Add5"
+            android:onClick="p2Controls"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Player 3"
+            android:id="@+id/textView4"
+            android:textSize="15dp"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/p2sub"
+            android:layout_alignLeft="@+id/p3sub"
+            android:layout_alignStart="@+id/p3sub" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/p3sub"
+            android:onClick="p3Controls"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/player4"
+            android:layout_alignStart="@+id/player4"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/p3add"
+            android:layout_alignBottom="@+id/p3sub"
+            android:layout_toRightOf="@+id/p3sub"
+            android:layout_toEndOf="@+id/p3sub"
+            android:onClick="p3Controls"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-5"
+            android:id="@+id/p3sub5"
+            android:layout_alignBottom="@+id/p3add"
+            android:layout_alignLeft="@+id/p2sub5"
+            android:layout_alignStart="@+id/p2sub5"
+            android:onClick="p3Controls"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+5"
+            android:id="@+id/p3add5"
+            android:layout_alignBottom="@+id/p3sub5"
+            android:layout_alignLeft="@+id/p2add5"
+            android:layout_alignStart="@+id/p2add5"
+            android:onClick="p3Controls"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Player 4"
+            android:id="@+id/player4"
+            android:textSize="15dp"
+            android:layout_below="@+id/p3sub"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="27dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/p4sub"
+            android:onClick="p4Controls"
+            android:layout_below="@+id/player4"
+            android:layout_toLeftOf="@+id/p4add"
+            android:layout_toStartOf="@+id/p4add"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/p4add"
+            android:layout_alignTop="@+id/p4sub"
+            android:layout_toLeftOf="@+id/p3sub5"
+            android:layout_toStartOf="@+id/p3sub5"
+            android:onClick="p4Controls"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-5"
+            android:id="@+id/p4sub5"
+            android:layout_alignBottom="@+id/p4add"
+            android:layout_toLeftOf="@+id/p4add5"
+            android:layout_toStartOf="@+id/p4add5"
+            android:onClick="p4Controls"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+5"
+            android:id="@+id/p4add5"
+            android:layout_alignBottom="@+id/p4sub5"
+            android:layout_alignLeft="@+id/p3add5"
+            android:layout_alignStart="@+id/p3add5"
+            android:onClick="p4Controls"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Life Count= 20"
+            android:id="@+id/p1count"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/p1Add5"
+            android:layout_alignStart="@+id/p1Add5"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Life Count= 20"
+            android:id="@+id/p2Count"
+            android:textSize="15dp"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_toRightOf="@+id/p2sub5"
+            android:layout_toEndOf="@+id/p2sub5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Life Count= 20"
+            android:id="@+id/p3count"
+            android:textSize="15dp"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_toRightOf="@+id/p3sub5"
+            android:layout_toEndOf="@+id/p3sub5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Life Count= 20"
+            android:id="@+id/p4count"
+            android:textSize="15dp"
+            android:layout_above="@+id/p4sub"
+            android:layout_alignLeft="@+id/p4add5"
+            android:layout_alignStart="@+id/p4add5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/loses"
+
+            android:textColor="#ffdf0101"
+            android:layout_below="@+id/p4add5"
+            android:layout_toRightOf="@+id/p4add5"
+            android:layout_toEndOf="@+id/p4add5"
+            android:layout_marginBottom="10dp" />
+
+
+    </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
